@@ -1,0 +1,85 @@
+{
+  "companyName": "Государственная Лизинговая компания",
+  "main": "Главная",
+  "about": "О компании",
+  "clients": "Клиентам",
+  "partners": "Партнеры",
+  "news": "Новости",
+  "products": "Продукты",
+  "feedback": "Обратная связь",
+  "call": "Заказать звонок",
+  "companyIndicators": {
+    "title": "Показатели компании",
+    "units": "Единиц техники",
+    "portfolio": "Портфель компании",
+    "newJobs": "Новые рабочие места",
+    "partners": "Партнеров компании",
+    "submitApplication": "Подать заявку на лизинг"
+  },
+  "newsHome": {
+    "title": "Новости",
+    "description": "Будь в курсе последних новостей нашей компании",
+    "seeAll": "Смотреть все"
+  },
+  "footer": {
+    "companyName": "Государственная Лизинговая компания",
+    "address": "Бишкек, ул. Пушкина 12",
+    "workingHours": "Понедельник - пятница 9:00 - 18:00",
+    "copyright": "Copyright 2024 Государственная Лизинговая компания (ОсОО «ГЛК»)"
+  },
+  "lizingCalculator": {
+    "title": "Калькулятор лизинга"
+  },
+  "routes": {
+    "aboutCompany": "О компании",
+    "history": "История компании",
+    "management": "Руководство компании",
+    "finance": "Финансовая отчетность",
+    "corruption": "Противодействие коррупции",
+    "career": "Карьера в компании",
+    "documents": "Нормативно-правовая база",
+    "leasingTerms": "Условия лизинга",
+    "submitApplication": "Подать заявку",
+    "leasingCalculator": "Лизинговый калькулятор",
+    "suppliersRegister": "Реестр поставщиков",
+    "insurance": "Страхование",
+    "frequentlyQuestions": "Часто задаваемые вопросы",
+    "suppliersPartners": "Реестр поставщиков техники",
+    "financialPartners": "Финансовые партнеры",
+    "internationalPartners": "Международные партнеры",
+    "allNews": "Все новости",
+    "contacts": "Контакты",
+    "leasingProduct": "Гослизинг",
+    "businessLeasing": "Бизнес лизинг",
+    "general": "Общие",
+    "deposits": "Депозиты",
+    "payment": "Оплата",
+    "support": "Поддержка"
+  },
+  "contacts": {
+    "officeAddress": "Адрес головного офиса",
+    "officeLocation": "Бишкек, ул. Пушкина 12",
+    "phoneNumber": "Номер телефона",
+    "workingHours": "Время работы",
+    "workingDays": "Понедельник - пятница",
+    "email": "Адрес электронной почты"
+  },
+  "lizingCalculator": {
+    "title": "Калькулятор лизинга",
+    "description": "Стоимость предмета лизинга и приведенные расчеты через калькулятор являются предварительными. Для точного определения процентной ставки по договору, пожалуйста, обратитесь к менеджеру в вашем регионе.",
+    "monthPayment": "Ежемесячный платеж",
+    "leasingCost": "Сумма договора лизинга",
+    "generalSum": "Основной долг",
+    "totalInterest": "Начисленные процент",
+    "submitApplication": "Оформить заявку"
+  },
+  "calculateSlider": {
+    "leasingCost": "Стоимость объекта лизинга",
+    "contractTerm": "Срок договора",
+    "initialPayment": "Первоначальный взнос",
+    "buyoutPayment": "Выкупной платеж",
+    "formValue": "От",
+    "toValue": "До"
+  },
+  "detailsButton": "Подробнее"
+}
