@@ -5,7 +5,7 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import {useState} from 'react';
-import Snackbar from '@mui/material/Snackbar';
+import Snackbar, {SnackbarCloseReason} from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
 export default function SubmitApplication() {
@@ -31,12 +31,12 @@ export default function SubmitApplication() {
         creditorsReport: Yup.mixed().nullable(),
         auditConclusion: Yup.mixed().nullable(),
     });
-    const handleInnChange = (e) => {
+    const handleInnChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.replace(/\D/g, '').slice(0, 12);
         formik.setFieldValue('inn', value);
     };
 
-    const handlePhoneChange = (e) => {
+    const handlePhoneChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.replace(/\D/g, '').slice(0, 10);
         formik.setFieldValue('contact', value);
     };
@@ -96,7 +96,7 @@ export default function SubmitApplication() {
         },
     });
 
-    const handleCloseSnackbar = (event, reason) => {
+    const handleCloseSnackbar = (reason: SnackbarCloseReason) => {
         if (reason === 'clickaway') {
             return;
         }
@@ -265,13 +265,15 @@ export default function SubmitApplication() {
             <Snackbar
                 open={openSnackbar}
                 autoHideDuration={2000}
-                onClose={handleCloseSnackbar}
-                anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
+                onClose={(_, reason) => handleCloseSnackbar(reason)} // Omit the 'event' parameter
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
             >
-                <Alert onClose={handleCloseSnackbar} severity="success" sx={{width: '100%'}}>
+                <Alert onClose={() => handleCloseSnackbar('clickaway')} severity="success" sx={{ width: '100%' }}>
                     Заявка успешно отправлена!
                 </Alert>
             </Snackbar>
+
+
         </div>
     );
 }

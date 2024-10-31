@@ -4,6 +4,20 @@ import { Link } from "react-router-dom";
 import { usePrismicDocumentByUID } from "@prismicio/react";
 import { useLanguage } from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
 
+
+interface NewsItem {
+    primary: {
+        img: {
+            url: string;
+        };
+        title_en: string;
+        title_ru: string;
+    };
+    items: Array<{
+        info_en: string;
+        info_ru: string;
+    }>;
+}
 const NewsHome = () => {
     const [document] = usePrismicDocumentByUID('for_clients', 'news');
 
@@ -14,6 +28,11 @@ const NewsHome = () => {
         return <div>Loading...</div>;
     }
 
+
+    const newsItems = document.data.body as NewsItem[];
+
+    const titleKey = `title_${language}` as keyof NewsItem['primary'];
+    const infoKey = `info_${language}` as keyof NewsItem['items'][number];
     return (
         <div>
             <div className='flex flex-col md:flex-row justify-between items-center'>
@@ -35,21 +54,21 @@ const NewsHome = () => {
             {/* Mobile Carousel with Text */}
             <div className='block md:hidden mt-[40px]'>
                 <div className="carousel w-full rounded-box">
-                    {document.data.body.map((item, index) => (
+                    {newsItems.map((item: NewsItem, index: number) => (
                         <div key={index} className="carousel-item bg-[#F5F6FF] overflow-hidden flex flex-col justify-center gap-[16px] max-w-[528px] m-auto mt-0 px-[16px]">
                             <img
                                 src={item.primary?.img.url}
                                 alt={`carousel-image-${index}`}
                                 className='w-full '
                             />
-                            <div className='flex flex-col gap-[16px]  px-[16px] mt-[16px] mb-[23px]'>
+                            <div className='flex flex-col gap-[16px] px-[16px] mt-[16px] mb-[23px]'>
                                 <h3 className='text-[18px] font-[700] leading-[24px] text-[#2B2D33]'>
-                                    {item.primary?.[`title_${language}`]}
+                                    {typeof item.primary?.[titleKey] === 'string' ? item.primary[titleKey] : ''}
                                 </h3>
                                 <p className='text-[16px] font-[400] leading-[22px] text-[#8B8B8B]'>
-                                    {item.items[0]?.[`info_${language}`]?.length > 100
-                                        ? `${item.items[0][`info_${language}`].slice(0, 100)}...`
-                                        : item.items[0][`info_${language}`]}
+                                    {item.items[0]?.[infoKey]?.length > 100
+                                        ? `${item.items[0][infoKey].slice(0, 100)}...`
+                                        : item.items[0][infoKey]}
                                 </p>
                                 <ButtonLInk link='news' text={t('detailsButton')} />
                             </div>
