@@ -1,6 +1,9 @@
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-
+import  Logo from "../../../public/icon/logo.svg"
+import Instagram from "../../../public/icon/instagram.svg"
+import Telegram from "../../../public/icon/telegram.svg"
+import Facebook from "../../../public/icon/facebook.svg"
 export default function Footer() {
     const {t} = useTranslation();
 
@@ -9,7 +12,7 @@ export default function Footer() {
             <div className="max-w-[1100px] mx-auto">
                 <div className="flex max-md:flex-col items-center">
                     <div className="flex gap-1 max-md:flex-col items-stretch">
-                        <img src="../../../public/icon/logo.svg" alt="logo" className="h-full"/>
+                        <img src={Logo} alt="logo" className="h-full"/>
                         <h4 className="w-[164px] text-white">
                             {t('footer.companyName')}
                         </h4>
@@ -56,13 +59,13 @@ export default function Footer() {
                     <div className="flex max-md:justify-center gap-x-5 md:ml-auto max-md:mt-6">
 
                         <Link to={"/"}>
-                            <img src="../../../public/icon/instagram.svg" className="w-5 h-5"/>
+                            <img src={Instagram} className="w-5 h-5"/>
                         </Link>
                         <Link to={"/"}>
-                            <img src="../../../public/icon/telegram.svg" className="w-5 h-5"/>
+                            <img src={Telegram} className="w-5 h-5"/>
                         </Link>
                         <Link to={"/"}>
-                            <img src="../../../public/icon/facebook.svg" className="w-5 h-5"/>
+                            <img src={Facebook} className="w-5 h-5"/>
                         </Link>
                     </div>
                 </div>

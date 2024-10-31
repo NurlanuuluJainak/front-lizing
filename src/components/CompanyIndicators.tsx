@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import {usePrismicDocumentByUID} from "@prismicio/react";
+import Car from "../../public/icon/car.svg"
+import Briefcase  from "../../public/icon/briefcase.svg"
+import Jobs from "../../public/icon/jobs.svg"
+import Partners from "../../public/icon/partners.svg"
 
 const CompanyIndicators = () => {
   const { t } = useTranslation();
@@ -25,7 +29,7 @@ const CompanyIndicators = () => {
         <div className="bg-[#F5F6FF]  rounded-[15px] py-[12px] px-[24px] flex flex-col md:flex-row justify-between gap-[20px] md:gap-0">
           <div className="flex flex-col gap-[12px] md:gap-[32px] md:w-[250px]">
             <div className="flex gap-[16px] items-center">
-              <img src="../../public/icon/car.svg" alt="car" />
+              <img src={Car} alt="car" />
               <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
                 {result.items[0]?.num}
               </p>
@@ -40,7 +44,7 @@ const CompanyIndicators = () => {
 
           <div className="flex flex-col gap-[12px] md:gap-[32px]">
             <div className="flex gap-[16px] items-center">
-              <img src="../../public/icon/briefcase.svg" alt="portfolio" />
+              <img src={Briefcase} alt="portfolio" />
               <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
                 {result.items[1]?.num}
               </p>
@@ -55,7 +59,7 @@ const CompanyIndicators = () => {
 
           <div className="flex flex-col gap-[12px] md:gap-[32px]">
             <div className="flex gap-[16px] items-center">
-              <img src="../../public/icon/jobs.svg" alt="jobs" />
+              <img src={Jobs} alt="jobs" />
               <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
                 {result.items[2]?.num}
               </p>
@@ -70,7 +74,7 @@ const CompanyIndicators = () => {
 
           <div className="flex flex-col gap-[12px] md:gap-[32px]">
             <div className="flex gap-[16px] items-center">
-              <img src="../../public/icon/partners.svg" alt="partners" />
+              <img src={Partners} alt="partners" />
               <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
                 {result.items[3]?.num}
               </p>

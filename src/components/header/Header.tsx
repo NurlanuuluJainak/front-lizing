@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher.tsx';
 import Icon from '../../../public/icon/menu.svg'
 import Logo from '../../../public/icon/logo.svg'
+import Language from '../../../public/icon/language.svg'
+import Call from '../../../public/icon/call.svg'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -106,16 +108,16 @@ const Header = () => {
 
           <div className="flex items-center gap-[22px] max-md:gap-[10px]">
             <div className="flex items-center gap-[8px]">
-              <img src="../../../public/icon/language.svg" alt="language" className="w-6 h-6 max-md:hidden"/>
+              <img src={Language} alt="language" className="w-6 h-6 max-md:hidden"/>
 
               <LanguageSwitcher/>
-              <img src="../../../public/icon/language.svg" alt="language" className="w-6 h-6 hidden max-md:block"/>
+              <img src={Language} alt="language" className="w-6 h-6 hidden max-md:block"/>
 
             </div>
             <div className="flex items-center gap-[8px] cursor-pointer max-md:hidden">
               <a href="tel:+996700497413"
                    className="decoration-none  hover:text-black transition-colors duration-300 flex gap-1 items-center">
-                  <img src="../../../public/icon/call.svg" alt="call"/>
+                  <img src={Call} alt="call"/>
                   <p className="hidden md:block md:fontSize15 font-[900] leading-[21px]">+996 700 49 74 13</p>
 
                 </a>
