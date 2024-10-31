@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher.tsx';
+import Icon from '../../../public/icon/menu.svg'
+import Logo from '../../../public/icon/logo.svg'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +18,10 @@ const Header = () => {
         <div className="container flex min-h-[90px] justify-between items-center px-4">
           <div className="flex gap-1 w-[100px]">
             <button onClick={toggleNavbar} className="lg:hidden block p-2">
-              <img src="../../../public/icon/menu.svg" alt="menu" />
+              <img src={Icon} alt="menu" />
             </button>
             <div className="flex w-[40px] gap-1">
-              <img src="../../../public/icon/logo.svg" alt="logo" />
+              <img src={Logo} alt="logo" />
               <span className="fontSize11 font-[600] leading-[13px]">
               {t('companyName')}
             </span>
