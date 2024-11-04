@@ -53,7 +53,7 @@ const Header = () => {
               </svg>
             </button>
 
-            <div className="flex flex-col lg:flex-row gap-4 fontSize14 font-medium leading-6 text-gray-800 p-6 lg:p-0">
+            <div className="flex  flex-col lg:flex-row gap-4 fontSize14 font-medium leading-6 text-gray-800 p-6 lg:p-0">
               <Link
                   to={'/'}
                   onClick={() => setIsOpen(false)}
@@ -108,10 +108,8 @@ const Header = () => {
 
           <div className="flex items-center gap-[22px] max-md:gap-[10px]">
             <div className="flex items-center gap-[8px]">
-              <img src={Language} alt="language" className="w-6 h-6 max-md:hidden"/>
 
               <LanguageSwitcher/>
-              <img src={Language} alt="language" className="w-6 h-6 hidden max-md:block"/>
 
             </div>
             <div className="flex items-center gap-[8px] cursor-pointer max-md:hidden">

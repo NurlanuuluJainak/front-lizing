@@ -81,5 +81,13 @@
     "formValue": "От",
     "toValue": "До"
   },
-  "detailsButton": "Подробнее"
+  "detailsButton": "Подробнее",
+  "gosLizingType": {
+    "lizingGos": "Гослизинг",
+    "lizingBisnes": "Бизнес лизинг",
+    "avtoLizing": "Получите доступ к легковым и коммерческим автомобилям на",
+    "favorable": " выгодных условиях",
+    "lizing": "лизинга"
+  }
+
 }

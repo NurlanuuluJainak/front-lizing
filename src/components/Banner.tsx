@@ -3,6 +3,7 @@ import './Banner.css';
 import { useTranslation } from 'react-i18next';
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "./LanguageSwitcher/LanguageContextProps.tsx";
+import {Link} from "react-router-dom";
 
 
 const Banner = () => {
@@ -87,9 +88,9 @@ const Banner = () => {
                       )}
 
                     </div>
-                    <button className="bg-white text-black px-[80px] text-[24px] py-[10px] rounded-lg">
+                    <Link to={"/products"} className="bg-white text-black px-[80px] text-[24px] py-[10px] rounded-lg">
                       {t('detailsButton')}
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

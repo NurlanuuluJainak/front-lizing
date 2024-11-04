@@ -30,11 +30,11 @@ const CompanyIndicators = () => {
           <div className="flex flex-col gap-[12px] md:gap-[32px] md:w-[250px]">
             <div className="flex gap-[16px] items-center">
               <img src={Car} alt="car" />
-              <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
+              <p className="text-[36px] md:text-[36px] font-[600] leading-[54px]">
                 {result.items[0]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[500] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
               {t('companyIndicators.units')}
             </p>
           </div>
@@ -45,11 +45,11 @@ const CompanyIndicators = () => {
           <div className="flex flex-col gap-[12px] md:gap-[32px]">
             <div className="flex gap-[16px] items-center">
               <img src={Briefcase} alt="portfolio" />
-              <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
+              <p className="text-[36px] md:text-[36px] font-[600] leading-[54px]">
                 {result.items[1]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[500] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
               {t('companyIndicators.portfolio')}
             </p>
           </div>
@@ -60,11 +60,11 @@ const CompanyIndicators = () => {
           <div className="flex flex-col gap-[12px] md:gap-[32px]">
             <div className="flex gap-[16px] items-center">
               <img src={Jobs} alt="jobs" />
-              <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
+              <p className="text-[36px] md:text-[36px] font-[600] leading-[54px]">
                 {result.items[2]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[500] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
               {t('companyIndicators.newJobs')}
             </p>
           </div>
@@ -75,11 +75,11 @@ const CompanyIndicators = () => {
           <div className="flex flex-col gap-[12px] md:gap-[32px]">
             <div className="flex gap-[16px] items-center">
               <img src={Partners} alt="partners" />
-              <p className="text-[36px] md:text-[36px] font-[400] leading-[54px]">
+              <p className="text-[36px] md:text-[36px] font-[600] leading-[54px]">
                 {result.items[3]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[500] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
               {t('companyIndicators.partners')}
             </p>
           </div>
