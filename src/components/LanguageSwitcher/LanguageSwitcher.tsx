@@ -25,10 +25,13 @@ const LanguageSwitcher = () => {
                 className="block w-full p-2 cursor-pointer bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 hover:bg-gray-50 transition ease-in-out duration-150"
             >
                 <option value="ru">
-                     Русский
+                    Русский
                 </option>
                 <option value="kg">
-                     Кыргызча
+                    Кыргызча
+                </option>
+                <option value="en">
+                    English
                 </option>
             </select>
 

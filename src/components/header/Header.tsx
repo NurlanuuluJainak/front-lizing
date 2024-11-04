@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher.tsx';
 import Icon from '../../../public/icon/menu.svg'
 import Logo from '../../../public/icon/logo.svg'
-import Language from '../../../public/icon/language.svg'
 import Call from '../../../public/icon/call.svg'
 
 const Header = () => {
