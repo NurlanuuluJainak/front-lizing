@@ -1,0 +1,125 @@
+{
+  "companyName": "State Leasing Company",
+  "main": "Home",
+  "about": "About the Company",
+  "clients": "Clients",
+  "partners": "Partners",
+  "news": "News",
+  "products": "Products",
+  "feedback": "Feedback",
+  "call": "Request a Call",
+  "companyIndicators": {
+    "title": "Company Indicators",
+    "units": "Units of Equipment",
+    "portfolio": "Company Portfolio",
+    "newJobs": "New Jobs",
+    "partners": "Company Partners",
+    "submitApplication": "Submit a Leasing Application"
+  },
+  "newsHome": {
+    "title": "News",
+    "description": "Stay updated with the latest news from our company",
+    "seeAll": "See All"
+  },
+  "footer": {
+    "companyName": "State Leasing Company",
+    "address": "Bishkek, Pushkin St. 12",
+    "workingHours": "Monday - Friday 9:00 AM - 6:00 PM",
+    "copyright": "Copyright 2024 State Leasing Company (LLC 'GLC')"
+  },
+  "lizingCalculator": {
+    "title": "Leasing Calculator"
+  },
+  "routes": {
+    "aboutCompany": "About the Company",
+    "history": "Company History",
+    "management": "Company Management",
+    "finance": "Financial Reporting",
+    "corruption": "Anti-Corruption",
+    "career": "Career at the Company",
+    "documents": "Regulatory Framework",
+    "leasingTerms": "Leasing Terms",
+    "submitApplication": "Submit an Application",
+    "leasingCalculator": "Leasing Calculator",
+    "suppliersRegister": "Supplier Registry",
+    "insurance": "Insurance",
+    "frequentlyQuestions": "Frequently Asked Questions",
+    "suppliersPartners": "Supplier Registry for Equipment",
+    "financialPartners": "Financial Partners",
+    "internationalPartners": "International Partners",
+    "allNews": "All News",
+    "contacts": "Contacts",
+    "leasingProduct": "State Leasing",
+    "businessLeasing": "Business Leasing",
+    "general": "General",
+    "deposits": "Deposits",
+    "payment": "Payment",
+    "support": "Support"
+  },
+  "contacts": {
+    "officeAddress": "Head Office Address",
+    "officeLocation": "Bishkek, Pushkin St. 12",
+    "phoneNumber": "Phone Number",
+    "workingHours": "Working Hours",
+    "workingDays": "Monday - Friday",
+    "email": "Email Address"
+  },
+  "lizingCalculator": {
+    "title": "Leasing Calculator",
+    "description": "The cost of the leasing item and the calculations provided by the calculator are preliminary. For accurate determination of the interest rate under the contract, please contact a manager in your region.",
+    "monthPayment": "Monthly Payment",
+    "leasingCost": "Total Leasing Amount",
+    "generalSum": "Principal Debt",
+    "totalInterest": "Accrued Interest",
+    "submitApplication": "Submit Application"
+  },
+  "calculateSlider": {
+    "leasingCost": "Cost of the Leasing Object",
+    "contractTerm": "Contract Term",
+    "initialPayment": "Initial Payment",
+    "buyoutPayment": "Buyout Payment",
+    "formValue": "From",
+    "toValue": "To"
+  },
+  "detailsButton": "More Details",
+  "gosLizingType": {
+    "lizingGos": "State Leasing",
+    "lizingBisnes": "Business Leasing",
+    "avtoLizing": "Access to passenger and commercial vehicles on",
+    "favorable": " favorable terms",
+    "lizing": "leasing"
+  },
+  "form": {
+    "inn": "INN of the Organization",
+    "enterInn": "Enter the INN of the Organization",
+    "orgName": "Full Name of the Organization",
+    "enterOrgName": "Enter the Name of the Organization",
+    "directorName": "Full Name of the Organization's Director",
+    "enterDirectorName": "Enter Full Name",
+    "responsibleEmployee": "Full Name of the Responsible Employee",
+    "enterResponsibleEmployee": "Enter Full Name",
+    "contact": "Contact",
+    "enterContact": "0709 000 000",
+    "balanceReport": "Balance Sheet for 3 Years",
+    "cashFlowReport": "Cash Flow Report for 3 Years",
+    "debtorsReport": "Debtor Breakdown with Dates of Origin and Repayment",
+    "assetsReport": "Breakdown of Company Assets",
+    "profitLossReport": "Profit and Loss Report for 3 Years",
+    "capitalChangeReport": "Report on Changes in Capital",
+    "creditorsReport": "Creditor Breakdown with Repayment Dates",
+    "auditConclusion": "Conclusion/Confirmation from External Auditor for the Last Year",
+    "submitButton": "Submit Application",
+    "sending": "Sending...",
+    "success": "Application successfully submitted!"
+  },
+  "validation": {
+    "innLength": "INN must consist of 12 digits",
+    "innRequired": "INN is required",
+    "orgNameRequired": "Organization Name is required",
+    "directorNameRequired": "Director's Full Name is required",
+    "responsibleEmployeeRequired": "Responsible Employee's Full Name is required",
+    "contactFormat": "Contact must consist of 10 digits",
+    "contactRequired": "Contact is required",
+    "balanceReportRequired": "PDF files are required"
+  }
+}
