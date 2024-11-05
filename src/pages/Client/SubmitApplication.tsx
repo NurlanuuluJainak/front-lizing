@@ -15,14 +15,19 @@ export default function SubmitApplication() {
     const [loading, setLoading] = useState(false)
 
     const validationSchema = Yup.object({
-        inn: Yup.string() .length(12, 'ИНН должен состоять из 12 цифр')
-            .required('ИНН обязателен'),
-        orgName: Yup.string().required('Наименование организации обязательно'),
-        directorName: Yup.string().required('ФИО руководителя обязательно'),
-        responsibleEmployee: Yup.string().required('ФИО ответственного сотрудника обязательно'),
-        contact: Yup.string().length(10, 'Контакт должен состоять из 10 цифр')
-            .required('Контакт обязательно '),
-        balanceReport: Yup.mixed().required('PDF файлы обязательно'),
+        inn: Yup.string()
+            .length(12, t('validation.innLength'))
+            .required(t('validation.innRequired')),
+        orgName: Yup.string()
+            .required(t('validation.orgNameRequired')),
+        directorName: Yup.string()
+            .required(t('validation.directorNameRequired')),
+        responsibleEmployee: Yup.string()
+            .required(t('validation.responsibleEmployeeRequired')),
+        contact: Yup.string().length(10,  t('validation.contactFormat'))
+            .required(t('validation.contactRequired')),
+        balanceReport: Yup.mixed()
+            .required(t('validation.balanceReportRequired')),
         cashFlowReport: Yup.mixed().nullable(),
         debtorsReport: Yup.mixed().nullable(),
         assetsReport: Yup.mixed().nullable(),
@@ -31,6 +36,7 @@ export default function SubmitApplication() {
         creditorsReport: Yup.mixed().nullable(),
         auditConclusion: Yup.mixed().nullable(),
     });
+
     const handleInnChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.replace(/\D/g, '').slice(0, 12);
         formik.setFieldValue('inn', value);
@@ -40,6 +46,7 @@ export default function SubmitApplication() {
         const value = e.target.value.replace(/\D/g, '').slice(0, 10);
         formik.setFieldValue('contact', value);
     };
+
 
 
 
@@ -116,54 +123,54 @@ export default function SubmitApplication() {
                     <div className="flex-1">
                         <div className="mt-6 max-md:mt-5">
                             <Input
-                                label="ИНН организации"
-                                placeholder="Введите ИНН организации"
+                                label={t('form.inn')}
+                                placeholder={t('form.enterInn')}
                                 name="inn"
                                 value={formik.values.inn}
                                 onChange={handleInnChange}
-                                error={formik.errors.inn && formik.touched.inn ? formik.errors.inn : ''}
+                                error={formik.touched.inn && formik.errors.inn ? formik.errors.inn : ''}
                             />
                         </div>
                         <div className="mt-6 max-md:mt-5">
                             <Input
-                                label="Полное наименование организации"
-                                placeholder="Введите наименование организации"
+                                label={t('form.orgName')}
+                                placeholder={t('form.enterOrgName')}
                                 name="orgName"
                                 value={formik.values.orgName}
                                 onChange={formik.handleChange}
-                                error={formik.errors.orgName && formik.touched.orgName ? formik.errors.orgName : ''}
+                                error={formik.touched.orgName && formik.errors.orgName ? formik.errors.orgName : ''}
                             />
                         </div>
                         <div className="mt-6 max-md:mt-5">
                             <Input
-                                label="ФИО руководителя организации"
-                                placeholder="Введите ФИО"
+                                label={t('form.directorName')}
+                                placeholder={t('form.enterDirectorName')}
                                 name="directorName"
                                 value={formik.values.directorName}
                                 onChange={formik.handleChange}
-                                error={formik.errors.directorName && formik.touched.directorName ? formik.errors.directorName : ''}
+                                error={formik.touched.directorName && formik.errors.directorName ? formik.errors.directorName : ''}
                             />
                         </div>
                     </div>
                     <div className="flex-1">
                         <div className="mt-6">
                             <Input
-                                label="ФИО ответственного сотрудника"
-                                placeholder="Введите ФИО"
+                                label={t('form.responsibleEmployee')}
+                                placeholder={t('form.enterResponsibleEmployee')}
                                 name="responsibleEmployee"
                                 value={formik.values.responsibleEmployee}
                                 onChange={formik.handleChange}
-                                error={formik.errors.responsibleEmployee && formik.touched.responsibleEmployee ? formik.errors.responsibleEmployee : ''}
+                                error={formik.touched.responsibleEmployee && formik.errors.responsibleEmployee ? formik.errors.responsibleEmployee : ''}
                             />
                         </div>
                         <div className="mt-6">
                             <Input
-                                label="Контакты"
-                                placeholder="0709 000 000"
+                                label={t('form.contact')}
+                                placeholder={t('form.enterContact')}
                                 name="contact"
                                 value={formik.values.contact}
                                 onChange={handlePhoneChange}
-                                error={formik.errors.contact && formik.touched.contact ? formik.errors.contact : ''}
+                                error={formik.touched.contact && formik.errors.contact ? formik.errors.contact : ''}
                             />
                         </div>
                     </div>
@@ -174,67 +181,67 @@ export default function SubmitApplication() {
                         <div className="flex-1">
                             <div className="mt-[44px] max-md:mt-[20px]">
                                 <FileInput
-                                    title="Балансовый отчет за 3 года"
+                                    title={t('form.balanceReport')}
                                     name="balanceReport"
                                     uploaded={Boolean(formik.values.balanceReport)}
                                     onChange={(file) => formik.setFieldValue('balanceReport', file)}
-                                    error={formik.errors.balanceReport && formik.touched.balanceReport ? formik.errors.balanceReport : ''}
+                                    error={formik.touched.balanceReport && formik.errors.balanceReport ? formik.errors.balanceReport : ''}
                                 />
                             </div>
                             <div className="mt-[44px] max-md:mt-[20px]">
                                 <FileInput
-                                    title="Отчет о движениях денежных средств за 3 года"
+                                    title={t('form.cashFlowReport')}
                                     name="cashFlowReport"
-                                    uploaded={!!formik.values.cashFlowReport}
+                                    uploaded={Boolean(formik.values.cashFlowReport)}
                                     onChange={(file) => formik.setFieldValue('cashFlowReport', file)}
-                                    error={formik.errors.cashFlowReport && formik.touched.cashFlowReport ? formik.errors.cashFlowReport : ''}
+                                    error={formik.touched.cashFlowReport && formik.errors.cashFlowReport ? formik.errors.cashFlowReport : ''}
                                 />
                             </div>
                             <div className="mt-[44px] max-md:mt-[20px]">
                                 <FileInput
-                                    title="Расшифровка дебиторов с датой возникновения и погашения задолженности"
+                                    title={t('form.debtorsReport')}
                                     name="debtorsReport"
-                                    uploaded={!!formik.values.debtorsReport}
+                                    uploaded={Boolean(formik.values.debtorsReport)}
                                     onChange={(file) => formik.setFieldValue('debtorsReport', file)}
-                                    error={formik.errors.debtorsReport && formik.touched.debtorsReport ? formik.errors.debtorsReport : ''}
+                                    error={formik.touched.debtorsReport && formik.errors.debtorsReport ? formik.errors.debtorsReport : ''}
                                 />
                             </div>
                             <div className="mt-[44px] max-md:mt-[20px]">
                                 <FileInput
-                                    title="Расшифровка основных средств предприятия"
+                                    title={t('form.assetsReport')}
                                     name="assetsReport"
-                                    uploaded={!!formik.values.assetsReport}
+                                    uploaded={Boolean(formik.values.assetsReport)}
                                     onChange={(file) => formik.setFieldValue('assetsReport', file)}
-                                    error={formik.errors.assetsReport && formik.touched.assetsReport ? formik.errors.assetsReport : ''}
+                                    error={formik.touched.assetsReport && formik.errors.assetsReport ? formik.errors.assetsReport : ''}
                                 />
                             </div>
                         </div>
                         <div className="flex-1">
                             <div className="mt-[44px] max-md:mt-[20px]">
                                 <FileInput
-                                    title="Отчет о прибылях и убытках за 3 года"
+                                    title={t('form.profitLossReport')}
                                     name="profitLossReport"
-                                    uploaded={!!formik.values.profitLossReport}
+                                    uploaded={Boolean(formik.values.profitLossReport)}
                                     onChange={(file) => formik.setFieldValue('profitLossReport', file)}
-                                    error={formik.errors.profitLossReport && formik.touched.profitLossReport ? formik.errors.profitLossReport : ''}
+                                    error={formik.touched.profitLossReport && formik.errors.profitLossReport ? formik.errors.profitLossReport : ''}
                                 />
                             </div>
                             <div className="mt-[44px] max-md:mt-[20px]">
                                 <FileInput
-                                    title="Отчет об изменениях в капитале"
+                                    title={t('form.capitalChangeReport')}
                                     name="capitalChangeReport"
-                                    uploaded={!!formik.values.capitalChangeReport}
+                                    uploaded={Boolean(formik.values.capitalChangeReport)}
                                     onChange={(file) => formik.setFieldValue('capitalChangeReport', file)}
-                                    error={formik.errors.capitalChangeReport && formik.touched.capitalChangeReport ? formik.errors.capitalChangeReport : ''}
+                                    error={formik.touched.capitalChangeReport && formik.errors.capitalChangeReport ? formik.errors.capitalChangeReport : ''}
                                 />
                             </div>
                             <div className="mt-[44px] max-md:mt-[20px]">
                                 <FileInput
-                                    title="Расшифровка кредиторов с датами погашения"
+                                    title={t('form.creditorsReport')}
                                     name="creditorsReport"
-                                    uploaded={!!formik.values.creditorsReport}
+                                    uploaded={Boolean(formik.values.creditorsReport)}
                                     onChange={(file) => formik.setFieldValue('creditorsReport', file)}
-                                    error={formik.errors.creditorsReport && formik.touched.creditorsReport ? formik.errors.creditorsReport : ''}
+                                    error={formik.touched.creditorsReport && formik.errors.creditorsReport ? formik.errors.creditorsReport : ''}
                                 />
                             </div>
                         </div>
@@ -242,11 +249,11 @@ export default function SubmitApplication() {
 
                     <div className="mt-[44px] max-md:mt-[20px]">
                         <FileInput
-                            title="Заключение/подтверждение внешнего аудитора за последний год"
+                            title={t('form.auditConclusion')}
                             name="auditConclusion"
-                            uploaded={!!formik.values.auditConclusion}
+                            uploaded={Boolean(formik.values.auditConclusion)}
                             onChange={(file) => formik.setFieldValue('auditConclusion', file)}
-                            error={formik.errors.auditConclusion && formik.touched.auditConclusion ? formik.errors.auditConclusion : ''}
+                            error={formik.touched.auditConclusion && formik.errors.auditConclusion ? formik.errors.auditConclusion : ''}
                         />
                     </div>
                 </div>
@@ -257,7 +264,7 @@ export default function SubmitApplication() {
                         className="bg-blue text-white w-[245px] h-[56px] rounded-lg"
                         disabled={loading}
                     >
-                        {loading ? 'Отправка...' : 'Отправить заявку'}
+                        {loading ? t('form.sending') : t('form.submitButton')}
                     </button>
                 </div>
             </form>
@@ -269,7 +276,7 @@ export default function SubmitApplication() {
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
             >
                 <Alert onClose={() => handleCloseSnackbar('clickaway')} severity="success" sx={{ width: '100%' }}>
-                    Заявка успешно отправлена!
+                    {t('form.success')}
                 </Alert>
             </Snackbar>
 

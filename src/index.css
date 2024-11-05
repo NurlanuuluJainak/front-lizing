@@ -40,6 +40,12 @@ body{
 .fontSize11{
   @apply text-[11px]
 }
+.fontSize12{
+  @apply text-[12px]
+}
+.fontSize13{
+  @apply text-[13px]
+}
 .fontSize14 {
   @apply text-[14px]
 }

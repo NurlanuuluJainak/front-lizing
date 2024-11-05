@@ -9,7 +9,7 @@ export default function Footer() {
 
     return (
         <div className="mt-[10px] py-[58px] bg-dark_blue">
-            <div className="max-w-[1100px] mx-auto">
+            <div className="max-w-[1300px] mx-auto">
                 <div className="flex max-md:flex-col items-center">
                     <div className="flex gap-1 max-md:flex-col items-stretch">
                         <img src={Logo} alt="logo" className="h-full"/>
@@ -17,19 +17,22 @@ export default function Footer() {
                             {t('footer.companyName')}
                         </h4>
                     </div>
-                    <div className="flex  max-md:flex-col max-md:mt-[24px] max-md:items-center text-white">
+                    <div className="md:hidden border border-[#d9d9d921] max-md:w-[24px] max-md:my-6"/>
+
+                    <div className="flex px-24  max-md:flex-col max-md:mt-[24px] max-md:items-center text-white">
                         <a
                             href="tel:+996700497413"
                             className="decoration-none flex gap-1 hover:text-gray transition-colors duration-300 group"
                         >
 
 
-                            <span          className="inline-block max-md:text-[20px] md:border-r md:border-[#d9d9d921] md:pr-4 md:mr-4"
+                            <span
+                                className="inline-block max-md:text-[20px] md:border-r md:border-[#d9d9d921] md:pr-4 md:mr-4"
                             >
     +996 700 49 74 13
   </span>
                         </a>
-
+                        <div className="md:hidden border border-[#d9d9d921] max-md:w-[24px] max-md:my-6"/>
 
 
                         <span
@@ -45,6 +48,8 @@ export default function Footer() {
                             className="inline-block max-md:text-[20px] md:border-r md:border-[#d9d9d921] md:pr-4 md:mr-4">
               {t('footer.address')}
             </span>
+                        <div className="md:hidden border border-[#d9d9d921] max-md:w-[24px] max-md:my-6"/>
+
 
                         <span className="inline-block max-md:text-[20px]">
               {t('footer.workingHours')}

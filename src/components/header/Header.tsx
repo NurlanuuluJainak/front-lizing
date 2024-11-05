@@ -8,7 +8,7 @@ import Call from '../../../public/icon/call.svg'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation('common'); // Получение функции перевода
+  const { t } = useTranslation('common');
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
       <header>
-        <div className="container flex min-h-[90px] justify-between items-center px-4">
+        <div className="max-w-[1300px] m-auto flex min-h-[90px] justify-between items-center px-4">
           <div className="flex gap-1 w-[100px]">
             <button onClick={toggleNavbar} className="lg:hidden block p-2">
               <img src={Icon} alt="menu" />
@@ -52,53 +52,53 @@ const Header = () => {
               </svg>
             </button>
 
-            <div className="flex  flex-col lg:flex-row gap-4 fontSize14 font-medium leading-6 text-gray-800 p-6 lg:p-0">
+            <div className="flex  flex-col lg:flex-row gap-4 fontSize13 font-[600] leading-6 text-black p-6 lg:p-0">
               <Link
                   to={'/'}
                   onClick={() => setIsOpen(false)}
-                  className="decoration-none hover:text-black transition-colors duration-300"
+                  className="decoration-none hover:text-gray transition-colors duration-300"
               >
                 {t('main')}
               </Link>
               <Link
                   to={'/about-us'}
                   onClick={() => setIsOpen(false)}
-                  className="decoration-none hover:text-black transition-colors duration-300"
+                  className="decoration-none hover:text-gray transition-colors duration-300"
               >
                 {t('about')}
               </Link>
               <Link
                   to={'/clients'}
                   onClick={() => setIsOpen(false)}
-                  className="decoration-none hover:text-black transition-colors duration-300"
+                  className="decoration-none hover:text-gray transition-colors duration-300"
               >
                 {t('clients')}
               </Link>
               <Link
                   to={'/partners'}
                   onClick={() => setIsOpen(false)}
-                  className="decoration-none hover:text-black transition-colors duration-300"
+                  className="decoration-none hover:text-gray transition-colors duration-300"
               >
                 {t('partners')}
               </Link>
               <Link
                   to={'/news'}
                   onClick={() => setIsOpen(false)}
-                  className="decoration-none hover:text-black transition-colors duration-300"
+                  className="decoration-none hover:text-gray transition-colors duration-300"
               >
                 {t('news')}
               </Link>
               <Link
                   to={'/products'}
                   onClick={() => setIsOpen(false)}
-                  className="decoration-none hover:text-black transition-colors duration-300"
+                  className="decoration-none hover:text-gray transition-colors duration-300"
               >
                 {t('products')}
               </Link>
               <Link
                   to={'/'}
                   onClick={() => setIsOpen(false)}
-                  className="decoration-none hover:text-black transition-colors duration-300"
+                  className="decoration-none hover:text-gray transition-colors duration-300"
               >
                 {t('feedback')}
               </Link>
