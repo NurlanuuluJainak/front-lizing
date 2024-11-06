@@ -55,15 +55,15 @@ const Banner = () => {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {filteredItems.map((slide: any) => (
-              <div key={slide.id} className="carousel-item w-full flex-shrink-0">
+              <div key={slide.id} className="carousel-item bg-dark_blue w-full flex-shrink-0">
                 <img
                     src={slide.primary.img?.url || ''}
-                    className="w-full h-[560px] object-cover hidden sm:block"
+                    className="w-[600px] ml-auto h-[400px] object-cover hidden sm:block"
                     alt={slide.alt || 'Слайд'}
                 />
                 <img
                     src={slide.primary.img_mobile?.url || ''}
-                    className="w-full h-[560px] object-cover sm:hidden"
+                    className="w-[400px] h-[160px] mt-[80%] object-cover sm:hidden"
                     alt="Mobile Banner"
                 />
                 <div
