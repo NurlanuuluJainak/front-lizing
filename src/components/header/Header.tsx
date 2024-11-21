@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher.tsx';
 import Icon from '../../../public/icon/menu.svg'
@@ -7,6 +7,7 @@ import Logo from '../../../public/icon/logo.svg'
 import Call from '../../../public/icon/call.svg'
 
 const Header = () => {
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation('common');
   console.log(t,"t>>>")
@@ -15,6 +16,10 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleNavigate = () => {
+    navigate('/')
+  }
+
   return (
       <header>
         <div className="max-w-[1300px] m-auto flex min-h-[90px] justify-between items-center px-4">
@@ -22,7 +27,7 @@ const Header = () => {
             <button onClick={toggleNavbar} className="lg:hidden block p-2">
               <img src={Icon} alt="menu" />
             </button>
-            <div className="flex w-[40px] gap-1">
+            <div onClick={handleNavigate} className="flex w-[40px] gap-1 cursor-pointer">
               <img src={Logo} alt="logo" />
               <span className="fontSize11 font-[600] leading-[13px]">
               {t('companyName')}
