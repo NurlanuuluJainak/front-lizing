@@ -5,13 +5,14 @@ import Car from "../../public/icon/car.svg"
 import Briefcase  from "../../public/icon/briefcase.svg"
 import Jobs from "../../public/icon/jobs.svg"
 import Partners from "../../public/icon/partners.svg"
+import Loading from './UI/loading';
 
 const CompanyIndicators = () => {
   const { t } = useTranslation();
   const [document] = usePrismicDocumentByUID('management', 'home');
 
   if (!document) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
   const result = document.data.body.find((item: any) =>

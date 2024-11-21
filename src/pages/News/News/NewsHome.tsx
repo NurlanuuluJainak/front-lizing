@@ -3,6 +3,7 @@ import ButtonLInk from "../../../components/UI/ButtonLInk.tsx";
 import { Link } from "react-router-dom";
 import { usePrismicDocumentByUID } from "@prismicio/react";
 import { useLanguage } from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 
 interface NewsItem {
@@ -24,9 +25,9 @@ const NewsHome = () => {
     const { language } = useLanguage();
     const { t } = useTranslation();
 
-    if (!document) {
-        return <div>Loading...</div>;
-    }
+        if (!document) {
+            return <Loading/>;
+        }
 
 
     const newsItems = document.data.body as NewsItem[];

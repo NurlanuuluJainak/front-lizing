@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 export default function LeasingTerms() {
   const {t} = useTranslation();
@@ -8,7 +9,7 @@ export default function LeasingTerms() {
     const { language } = useLanguage();
 
     if (!document) {
-        return <div>Loading...</div>;
+        return <Loading/>;
     }
 
     return (

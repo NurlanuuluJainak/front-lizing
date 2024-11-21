@@ -6,6 +6,7 @@ import Layout from './layout/Layout.tsx';
 import {
   AboutMicroRoutes,
   ClientsMicroRoutes,
+  ContactsMicroRoutes,
   NewsMicroRoutes,
   PartnersMicroRoutes,
   ProductsMicroRoutes
@@ -19,6 +20,7 @@ const routes = [
   {path: '/partners/*', element: <Layout title="partners" routes={PartnersMicroRoutes}/>},
   {path: '/news/*', element: <Layout title="news" routes={NewsMicroRoutes}/>},
   {path: '/products/*', element: <Layout title="products" routes={ProductsMicroRoutes}/>},
+  {path:"/contact/*",element:<Layout title="feedback" routes={ContactsMicroRoutes}/>},
 ];
 
 const App = () => {

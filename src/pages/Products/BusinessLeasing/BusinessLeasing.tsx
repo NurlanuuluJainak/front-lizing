@@ -1,5 +1,6 @@
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 export default function BusinessLeasing() {
     const [document] = usePrismicDocumentByUID('products', 'product_page');
@@ -7,7 +8,7 @@ export default function BusinessLeasing() {
 
     if (!document) {
         return (
-            <div>Loading...</div>
+          <Loading/>
         )
     }
 

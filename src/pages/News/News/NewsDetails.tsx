@@ -2,6 +2,7 @@ import {Link, useParams} from "react-router-dom";
 import  Back from '../../../../public/icon/back.svg'
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 export default function NewsDetails() {
   const { id } = useParams();
@@ -9,7 +10,7 @@ export default function NewsDetails() {
   const { language } = useLanguage();
 
   if (!document) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
   const news = document.data.body.find((item: any) => item.id === id);

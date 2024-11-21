@@ -2,6 +2,7 @@
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import { useTranslation } from 'react-i18next';
 import {useLanguage} from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 export default function SuppliersRegister() {
     const [document] = usePrismicDocumentByUID('for_clients', 'suppliers');
@@ -9,7 +10,7 @@ export default function SuppliersRegister() {
     const { language } = useLanguage();
 
     if (!document) {
-        return <div>Loading...</div>;
+        return <Loading/>;
     }
     return (
         <div className=" mb-[100px]">

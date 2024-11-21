@@ -1,12 +1,13 @@
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 const Management = () => {
   const [document] = usePrismicDocumentByUID('management', 'managementpage');
   const { language } = useLanguage();
 
   if (!document) {
-      return <div>Loading...</div>;
+      return <Loading/>;
   }
     console.log(document);
     return (

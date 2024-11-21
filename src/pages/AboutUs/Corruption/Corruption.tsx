@@ -1,12 +1,13 @@
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 const Corruption = () => {
     const { language } = useLanguage();
     const [document] = usePrismicDocumentByUID('pdf_files', 'pdf_files_pages');
 
     if (!document) {
-        return <div>Loading...</div>;
+        return <Loading/>;
     }
     return (
         <div>

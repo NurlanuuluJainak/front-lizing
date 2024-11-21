@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "./LanguageSwitcher/LanguageContextProps.tsx";
 import {Link} from "react-router-dom";
+import Loading from "./UI/loading.tsx";
 
 
 const Banner = () => {
@@ -23,12 +24,14 @@ const Banner = () => {
 
 
   if (!document) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
   const filteredItems = document.data.body.filter((item: any) => {
     return item.primary.title_ru || item.primary.title_kg;
   });
+
+
 
   const nextSlide = () => {
     setIsTextVisible(false);
@@ -58,12 +61,12 @@ const Banner = () => {
               <div key={slide.id} className="carousel-item bg-dark_blue w-full flex-shrink-0">
                 <img
                     src={slide.primary.img?.url || ''}
-                    className="w-[600px] ml-auto h-[400px] object-cover hidden sm:block"
+                    className="w-[600px] ml-auto h-[400px]  object-cover hidden sm:block"
                     alt={slide.alt || 'Слайд'}
                 />
                 <img
                     src={slide.primary.img_mobile?.url || ''}
-                    className="w-[400px] h-[160px] mt-[80%] object-cover sm:hidden"
+                    className="w-[400px]  mt-[80%]  object-cover sm:hidden"
                     alt="Mobile Banner"
                 />
                 <div

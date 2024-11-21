@@ -6,7 +6,7 @@ export default function Contacts() {
       <div className="mb-[100px]">
         <div className="mb-[30px]">
           <h1 className="text-center text-[32px] font-[700] leading-[41px] md:text-left">
-            {t('routes.contacts')}
+            {t('feedback')}
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-[40px] md:gap-[80px]">

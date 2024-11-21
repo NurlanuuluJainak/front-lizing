@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import ButtonLInk from "../../../components/UI/ButtonLInk.tsx";
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import {useLanguage} from "../../../components/LanguageSwitcher/LanguageContextProps.tsx";
+import Loading from "../../../components/UI/loading.tsx";
 
 export default function AllNews() {
     const [document] = usePrismicDocumentByUID('for_clients', 'news');
@@ -9,7 +10,7 @@ export default function AllNews() {
     const {t} = useTranslation()
 
     if (!document) {
-        return <div>Loading...</div>;
+        return <Loading/>;
     }
 
     return (

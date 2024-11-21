@@ -9,6 +9,7 @@ import Call from '../../../public/icon/call.svg'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation('common');
+  console.log(t,"t>>>")
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -96,7 +97,7 @@ const Header = () => {
                 {t('products')}
               </Link>
               <Link
-                  to={'/'}
+                  to={'contact'}
                   onClick={() => setIsOpen(false)}
                   className="decoration-none hover:text-gray transition-colors duration-300"
               >

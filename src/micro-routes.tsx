@@ -34,6 +34,11 @@ export const AboutMicroRoutes = [
   { path: "documents", element: <Documents />, text: "routes.documents" },
 ];
 
+export const ContactsMicroRoutes = [
+  { path: "", element: <Contacts />, text: "feedback" },
+
+]
+
 export const ClientsMicroRoutes = [
   { path: "", element: <LeasingTerms />, text: "routes.leasingTerms" },
   { path: "submit-application", element: <SubmitApplication />, text: "routes.submitApplication" },
@@ -51,7 +56,6 @@ export const PartnersMicroRoutes = [
 
 export const NewsMicroRoutes = [
   { path: "", element: <AllNews />, text: "routes.allNews" },
-  { path: "contacts", element: <Contacts />, text: "routes.contacts" },
   { path: "/:id", element: <NewsDetails />, text: "" }, 
 ];
 

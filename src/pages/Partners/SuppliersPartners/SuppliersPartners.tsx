@@ -1,5 +1,6 @@
 import {usePrismicDocumentByUID} from "@prismicio/react";
 import { useTranslation } from "react-i18next";
+import Loading from "../../../components/UI/loading";
 
 const SuppliersPartners = () => {
     const [document] = usePrismicDocumentByUID('for_clients', 'partners');
@@ -8,7 +9,7 @@ const SuppliersPartners = () => {
 
     if (!document) {
         return (
-            <div>Loading...</div>
+          <Loading/>
         )
     }
 
