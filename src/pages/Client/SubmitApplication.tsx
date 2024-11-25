@@ -4,16 +4,16 @@ import {useTranslation} from 'react-i18next';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-import {useState} from 'react';
+import { useState } from 'react';
 import Snackbar, {SnackbarCloseReason} from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
 export default function SubmitApplication() {
     const {t} = useTranslation();
-    const api = `https://back-ifs.onrender.com/submit`;
+    const api = import.meta.env.VITE_API_URL
     const [openSnackbar, setOpenSnackbar] = useState(false);
     const [loading, setLoading] = useState(false)
-
+ 
     const validationSchema = Yup.object({
         inn: Yup.string()
             .length(12, t('validation.innLength'))
