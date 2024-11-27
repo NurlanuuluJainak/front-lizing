@@ -122,6 +122,12 @@
     "contactFormat": "Контакт должен состоять из 10 цифр",
     "contactRequired": "Контакт обязателен",
     "balanceReportRequired": "PDF файлы обязательно"
+  },
+
+  "header": {
+    "languageRus": "Русский",
+    "languageKyr": "Кыргызча",
+    "languageEng": "English"
   }
 
 }
