@@ -10,10 +10,10 @@ import Alert from '@mui/material/Alert';
 
 export default function SubmitApplication() {
     const {t} = useTranslation();
-    const api = import.meta.env.VITE_API_URL
+    const api = `/api/submit`;
     const [openSnackbar, setOpenSnackbar] = useState(false);
     const [loading, setLoading] = useState(false)
- 
+
     const validationSchema = Yup.object({
         inn: Yup.string()
             .length(12, t('validation.innLength'))
