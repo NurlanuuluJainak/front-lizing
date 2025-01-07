@@ -1,16 +1,18 @@
 import Input from '../../components/UI/Input.tsx';
 import FileInput from '../../components/UI/FileInput.tsx';
-import {useTranslation} from 'react-i18next';
-import {useFormik} from 'formik';
+import { useTranslation } from 'react-i18next';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { useState } from 'react';
-import Snackbar, {SnackbarCloseReason} from '@mui/material/Snackbar';
+import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
+const api = import.meta.env.VITE_API_URL;
+
+
 export default function SubmitApplication() {
-    const {t} = useTranslation();
-    const api = `/api/submit`;
+    const { t } = useTranslation();
     const [openSnackbar, setOpenSnackbar] = useState(false);
     const [loading, setLoading] = useState(false)
 
@@ -24,7 +26,7 @@ export default function SubmitApplication() {
             .required(t('validation.directorNameRequired')),
         responsibleEmployee: Yup.string()
             .required(t('validation.responsibleEmployeeRequired')),
-        contact: Yup.string().length(10,  t('validation.contactFormat'))
+        contact: Yup.string().length(10, t('validation.contactFormat'))
             .required(t('validation.contactRequired')),
         balanceReport: Yup.mixed()
             .required(t('validation.balanceReportRequired')),
@@ -37,12 +39,12 @@ export default function SubmitApplication() {
         auditConclusion: Yup.mixed().nullable(),
     });
 
-    const handleInnChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const handleInnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.replace(/\D/g, '').slice(0, 12);
         formik.setFieldValue('inn', value);
     };
 
-    const handlePhoneChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.replace(/\D/g, '').slice(0, 10);
         formik.setFieldValue('contact', value);
     };
@@ -67,7 +69,7 @@ export default function SubmitApplication() {
             auditConclusion: null,
         },
         validationSchema,
-        onSubmit: async (values, {resetForm}) => {
+        onSubmit: async (values, { resetForm }) => {
             setLoading(true)
             try {
                 const formData = new FormData();
@@ -92,7 +94,6 @@ export default function SubmitApplication() {
                     },
                 });
 
-                console.log('API response:', response.data);
                 setOpenSnackbar(true);
                 resetForm()
             } catch (error) {

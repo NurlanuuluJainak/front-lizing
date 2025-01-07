@@ -8,20 +8,19 @@ interface Props {
     uploaded: boolean;
 }
 
-export default function FileInput({title, onChange, error, name, uploaded}: Props) {
+export default function FileInput({ title, onChange, error, name, uploaded }: Props) {
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files ? event.target.files[0] : null;
         onChange(file);
     };
 
-    console.log(uploaded, 'uploaded')
 
     return (
         <div>
             <div className="flex flex-col md:flex-row justify-between items-center">
-      <span className="inline-block font-medium max-w-[682px] mb-3 md:mb-0">
-        {title}
-      </span>
+                <span className="inline-block font-medium max-w-[682px] mb-3 md:mb-0">
+                    {title}
+                </span>
                 <div className="max-w-[200px] w-full">
                     <div className="flex items-center gap-1">
                         <input
@@ -34,7 +33,7 @@ export default function FileInput({title, onChange, error, name, uploaded}: Prop
                         />
 
                         {uploaded && (
-                            <img src={Check} alt={'check'} className={'w-[20px] h-[20px]'}/>
+                            <img src={Check} alt={'check'} className={'w-[20px] h-[20px]'} />
 
                         )}
 
