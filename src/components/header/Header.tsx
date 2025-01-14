@@ -118,7 +118,7 @@ const Header = () => {
             <a href="tel:+996700497413"
               className="decoration-none  hover:text-black transition-colors duration-300 flex gap-1 items-center">
               <img src={Call} alt="call" />
-              <p className="hidden md:block md:fontSize15 font-[900] leading-[21px]">+996 700 49 74 13</p>
+              <p className="hidden md:block md:fontSize15 font-[900] leading-[21px]">+996 557 75 57 11</p>
 
             </a>
 

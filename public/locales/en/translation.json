@@ -25,7 +25,7 @@
     "companyName": "State Leasing Company",
     "address": "Bishkek, Pushkin St. 12",
     "workingHours": "Monday - Friday 9:00 AM - 6:00 PM",
-    "copyright": "Copyright 2024 State Leasing Company (LLC 'GLC')"
+    "copyright": " Open Joint Stock Company \"State Leasing Company\" (OJSC \"SLC\")"
   },
   "lizingCalculator": {
     "title": "Leasing Calculator"
@@ -58,7 +58,7 @@
   },
   "contacts": {
     "officeAddress": "Head Office Address",
-    "officeLocation": "Bishkek, Pushkin St. 12",
+    "officeLocation": "Bishkek, st. Moskovskaya 3",
     "phoneNumber": "Phone Number",
     "workingHours": "Working Hours",
     "workingDays": "Monday - Friday",
@@ -85,9 +85,9 @@
   "gosLizingType": {
     "lizingGos": "State Leasing",
     "lizingBisnes": "Business Leasing",
-    "avtoLizing": "Access to passenger and commercial vehicles on",
-    "favorable": " favorable terms",
-    "lizing": "leasing"
+    "avtoLizing": "Leasing for government agencies,",
+    "carLizing":"Leasing for private and commercial organizations,",
+    "favorable": "more details."
   },
   "form": {
     "inn": "INN of the Organization",
