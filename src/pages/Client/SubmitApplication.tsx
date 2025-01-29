@@ -11,6 +11,7 @@ import Alert from '@mui/material/Alert';
 const api = import.meta.env.VITE_API_URL;
 
 
+
 export default function SubmitApplication() {
     const { t } = useTranslation();
     const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -88,11 +89,10 @@ export default function SubmitApplication() {
                 if (values.assetsReport) formData.append('decoding_fixed_assets', values.assetsReport);
                 if (values.auditConclusion) formData.append('conclusion_confirmation', values.auditConclusion);
 
-                const response = await axios.post(api, formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                    },
+                await axios.post(`${api}/submit`, formData, {
+                    headers: { 'Content-Type': 'multipart/form-data' },
                 });
+
 
                 setOpenSnackbar(true);
                 resetForm()
