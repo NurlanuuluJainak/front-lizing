@@ -56,7 +56,7 @@ export const PartnersMicroRoutes = [
 
 export const NewsMicroRoutes = [
   { path: "", element: <AllNews />, text: "routes.allNews" },
-  { path: "/:id", element: <NewsDetails />, text: "" }, 
+  { path: "/:id", element: <NewsDetails />, text: "" },
 ];
 
 export const ProductsMicroRoutes = [

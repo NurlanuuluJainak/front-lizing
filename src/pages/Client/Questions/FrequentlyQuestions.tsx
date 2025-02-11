@@ -8,7 +8,7 @@ export default function FrequentlyQuestions() {
   return (
     <div className="mb-[100px]">
       <h1 className='text-center text-[32px] font-[700] leading-[41px] mb-[30px] md:text-left max-md:text-[24px]'>
-       {t('routes.frequentlyQuestions')}
+        {t('routes.frequentlyQuestions')}
       </h1>
       <div className="flex gap-[71px] max-md:flex-col ">
         <div className="flex flex-col gap-[8px]">
@@ -20,14 +20,14 @@ export default function FrequentlyQuestions() {
                 className={({ isActive }) =>
                   isActive ? 'font-[500] bg-gray_CD rounded-[8px] p-2' : 'font-[500] text-gray'
                 }>
-                  {t(route.text)}
+                {t(route.text)}
               </NavLink>
             </li>
           ))}
         </div>
         <Routes>
           {FrequentlyQuestionsMicroRoutes.map((route, idx) => (
-            <Route key={idx} path={route.path} element={route.element}/>
+            <Route key={idx} path={route.path} element={route.element} />
           ))}
         </Routes>
       </div>
