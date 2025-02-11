@@ -8,7 +8,7 @@ import { useState } from 'react';
 import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-const api = 'https://back-ifs.onrender.com';
+const api = import.meta.env.VITE_API_URL;;
 
 
 

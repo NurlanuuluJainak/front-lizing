@@ -5,7 +5,6 @@ import Loading from "../../../components/UI/loading";
 const SuppliersPartners = () => {
     const [document] = usePrismicDocumentByUID('for_clients', 'partners');
     const { t } = useTranslation()
-    console.log(document);
 
     if (!document) {
         return (
