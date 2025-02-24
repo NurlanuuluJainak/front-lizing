@@ -25,9 +25,9 @@ const NewsHome = () => {
     const { language } = useLanguage();
     const { t } = useTranslation();
 
-        if (!document) {
-            return <Loading/>;
-        }
+    if (!document) {
+        return <Loading />;
+    }
 
 
     const newsItems = document.data.body as NewsItem[];
@@ -38,7 +38,7 @@ const NewsHome = () => {
         <div>
             <div className='flex flex-col md:flex-row justify-between items-center'>
                 <div className='w-full md:w-[397px] flex flex-col min-h-[90px] gap-[16px]'>
-                    <h1 className='text-[32px] md:text-[40px] font-[700] leading-[48px] text-blue text-center md:text-left'>
+                    <h1 className='text-[32px] md:text-[40px] font-[700] leading-[48px] text-[#122247] text-center md:text-left'>
                         {t('newsHome.title')}
                     </h1>
                     <p className='text-[14px] font-[500] leading-[24px] text-center md:text-left'>
@@ -46,7 +46,7 @@ const NewsHome = () => {
                     </p>
                 </div>
                 <div className='mt-[16px] md:mt-0'>
-                    <Link className='py-[10px] px-[18px] bg-blue rounded-[8px] text-[white] text-[16px] font-[500] leading-[24px]' to={'/news'}>
+                    <Link className='py-[10px] px-[18px] bg-[#122247] rounded-[8px] text-[white] text-[16px] font-[500] leading-[24px]' to={'/news'}>
                         {t('newsHome.seeAll')}
                     </Link>
                 </div>
@@ -57,11 +57,14 @@ const NewsHome = () => {
                 <div className="carousel w-full rounded-box">
                     {newsItems.map((item: NewsItem, index: number) => (
                         <div key={index} className="carousel-item bg-[#F5F6FF] overflow-hidden flex flex-col justify-center gap-[16px] max-w-[528px] m-auto mt-0 px-[16px]">
-                            <img
-                                src={item.primary?.img.url}
-                                alt={`carousel-image-${index}`}
-                                className='w-full '
-                            />
+                            <div className="w-full h-[300px]">
+                                <img
+                                    src={item.primary?.img.url}
+                                    alt={`carousel-image-${index}`}
+                                    className='w-full h-full object-cover '
+                                />
+                            </div>
+
                             <div className='flex flex-col gap-[16px] px-[16px] mt-[16px] mb-[23px]'>
                                 <h3 className='text-[18px] font-[700] leading-[24px] text-[#2B2D33]'>
                                     {typeof item.primary?.[titleKey] === 'string' ? item.primary[titleKey] : ''}
@@ -82,7 +85,7 @@ const NewsHome = () => {
             <div className='hidden md:flex flex-col md:flex-row justify-between mt-[40px] md:mt-[60px] mb-[60px] gap-[24px]'>
                 <div className='w-full md:w-[592px] flex flex-col gap-[32px] bg-[#F5F6FF] overflow-hidden h-[515px] rounded-[16px]'>
                     <img src={document.data.body?.[document.data.body.length - 1]?.primary?.img.url} alt='frame1'
-                         className='w-full h-[auto] md:h-[282px]'
+                        className='w-full h-[auto] md:h-[282px]'
                     />
                     <div className='flex flex-col justify-center gap-[16px] max-w-[528px] m-auto mt-0 px-[16px] md:px-0 h-[auto] md:h-[142px]'>
                         <h3 className='text-[18px] font-[700] leading-[24px] text-[#2B2D33]'>

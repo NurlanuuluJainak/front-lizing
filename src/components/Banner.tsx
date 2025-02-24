@@ -58,7 +58,7 @@ const Banner = () => {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {filteredItems.map((slide: any) => (
-            <div key={slide.id} className="carousel-item bg-dark_blue w-full flex-shrink-0 ">
+            <div key={slide.id} className="carousel-item bg-[#122247] w-full flex-shrink-0 ">
               <img
                 src={slide.primary.img?.url || ''}
                 className="w-[600px] ml-auto h-[400px]  object-cover hidden sm:block"

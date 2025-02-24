@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import {usePrismicDocumentByUID} from "@prismicio/react";
+import { usePrismicDocumentByUID } from "@prismicio/react";
 import Car from "../../public/icon/car.svg"
-import Briefcase  from "../../public/icon/briefcase.svg"
+import Briefcase from "../../public/icon/briefcase.svg"
 import Jobs from "../../public/icon/jobs.svg"
 import Partners from "../../public/icon/partners.svg"
 import Loading from './UI/loading';
@@ -12,18 +12,18 @@ const CompanyIndicators = () => {
   const [document] = usePrismicDocumentByUID('management', 'home');
 
   if (!document) {
-    return <Loading/>;
+    return <Loading />;
   }
 
   const result = document.data.body.find((item: any) =>
-      item.primary.title &&
-      item.primary.title[0]?.text === "Показатели компании"
+    item.primary.title &&
+    item.primary.title[0]?.text === "Показатели компании"
   );
 
   return (
     <div className="mt-[120px] mb-[120px] ">
       <div className="flex flex-col gap-[40px] min-h-[225px]">
-        <h1 className="text-[32px] md:text-[40px] font-[700] leading-[48px] text-blue text-center md:text-left">
+        <h1 className="text-[32px] md:text-[40px] font-[700] leading-[48px] text-[#122247] text-center md:text-left">
           {t('companyIndicators.title')}
         </h1>
 
@@ -35,7 +35,7 @@ const CompanyIndicators = () => {
                 {result.items[0]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-[#122247]">
               {t('companyIndicators.units')}
             </p>
           </div>
@@ -50,7 +50,7 @@ const CompanyIndicators = () => {
                 {result.items[1]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-[#122247]">
               {t('companyIndicators.portfolio')}
             </p>
           </div>
@@ -65,7 +65,7 @@ const CompanyIndicators = () => {
                 {result.items[2]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-[#122247]">
               {t('companyIndicators.newJobs')}
             </p>
           </div>
@@ -80,17 +80,17 @@ const CompanyIndicators = () => {
                 {result.items[3]?.num}
               </p>
             </div>
-            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-blue">
+            <p className="text-[18px] md:text-[18px] font-[600] leading-[27px] text-[#122247]">
               {t('companyIndicators.partners')}
             </p>
           </div>
         </div>
 
         <div className="flex justify-center mt-[20px] md:mt-0">
-            <Link className="px-[36px] py-[16px] bg-blue rounded-[8px] text-[18px] md:text-[24px] font-[700] leading-[34px] text-[white]" to={'/clients/submit-application'}>
-              {' '}
-              {t('companyIndicators.submitApplication')}
-            </Link>
+          <Link className="px-[36px] py-[16px] bg-[#122247] rounded-[8px] text-[18px] md:text-[24px] font-[700] leading-[34px] text-[white]" to={'/clients/submit-application'}>
+            {' '}
+            {t('companyIndicators.submitApplication')}
+          </Link>
         </div>
       </div>
     </div>

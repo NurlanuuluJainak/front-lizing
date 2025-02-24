@@ -1,7 +1,7 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import CalculateSlider from "./CalculateSlider.tsx";
-import {useState} from "react";
-import {Link} from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export interface DepositCalculator {
     leasingCost: number,
@@ -18,7 +18,7 @@ export default function CalculatorLizing() {
         buyoutPayment: 6,
     });
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const generalSum = depositCalculator.leasingCost - depositCalculator.initialPayment;
 
@@ -33,7 +33,7 @@ export default function CalculatorLizing() {
 
     return (
         <div className="py-[60px] mt-[10px]">
-            <h2 className="fontSize40 text-blue font-bold">{t('lizingCalculator.title')}</h2>
+            <h2 className="fontSize40 text-[#122247] font-bold">{t('lizingCalculator.title')}</h2>
             <h5 className="max-w-[418px] text-[16px] text-[#8B8B8B]">
                 {t('lizingCalculator.description')}
 
@@ -118,9 +118,9 @@ export default function CalculatorLizing() {
                             </div>
 
                         </div>
-                        <hr className="text-[#959595] my-6"/>
+                        <hr className="text-[#959595] my-6" />
                         <div className="flex item-center justify-between text-[18px] max-md:text-[14px]">
-                        <h4> {t('lizingCalculator.generalSum')}</h4>
+                            <h4> {t('lizingCalculator.generalSum')}</h4>
 
                             <h4> {t('lizingCalculator.totalInterest')}</h4>
 
@@ -142,7 +142,7 @@ export default function CalculatorLizing() {
 
                         </div>
 
-                        <Link className="bg-blue text-white fontSize18 py-3 rounded-[7px] w-full mt-5 block text-center" to={'/clients/submit-application'}>
+                        <Link className="bg-[#122247] text-white fontSize18 py-3 rounded-[7px] w-full mt-5 block text-center" to={'/clients/submit-application'}>
                             {t('lizingCalculator.submitApplication')}
                         </Link>
 
@@ -150,7 +150,7 @@ export default function CalculatorLizing() {
                         <span className="text-[#555555] text-[10px] mt-[28px] font-normal inline-block">
                             {t('lizingCalculator.description')}
 
-            </span>
+                        </span>
                     </div>
                 </div>
             </div>

@@ -262,7 +262,7 @@ export default function SubmitApplication() {
                 <div className="text-center my-[48px]">
                     <button
                         type="submit"
-                        className="bg-blue text-white w-[245px] h-[56px] rounded-lg"
+                        className="bg-[#122247] text-white w-[245px] h-[56px] rounded-lg"
                         disabled={loading}
                     >
                         {loading ? t('form.sending') : t('form.submitButton')}

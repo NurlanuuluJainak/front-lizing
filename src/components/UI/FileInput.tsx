@@ -40,7 +40,7 @@ export default function FileInput({ title, onChange, error, name, uploaded }: Pr
 
                         <label
                             htmlFor={`fileInput-${name}`}
-                            className="bg-blue text-white flex items-center justify-center w-full rounded-[4px] h-[30px] cursor-pointer"
+                            className="bg-[#122247] text-white flex items-center justify-center w-full rounded-[4px] h-[30px] cursor-pointer"
                         >
                             Выберите файл
                         </label>

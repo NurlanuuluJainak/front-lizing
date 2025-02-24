@@ -21,7 +21,7 @@ export default function Layout(props: Props) {
 
   return (
     <div className="container mt-2 max-md:max-w-[343px] mx-auto">
-      <h2 className="text-blue text-[40px] font-bold">{t(props.title)}</h2>
+      <h2 className="text-[#122247] text-[40px] font-bold">{t(props.title)}</h2>
       <div className="mb-5 flex max-md:flex-col gap-5 mx-5 md:mt-[43px] gap-x-[64px]">
         <ul className="flex flex-col text-[16px] font-[400] leading-[20px] w-[250px]">
           {props.routes.map((route) => {

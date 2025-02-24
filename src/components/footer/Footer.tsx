@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Logo from "../../../public/icon/logo.svg"
 import Instagram from "../../../public/icon/instagram.svg"
 import Telegram from "../../../public/icon/telegram.svg"
 import Facebook from "../../../public/icon/facebook.svg"
@@ -8,11 +7,10 @@ export default function Footer() {
     const { t } = useTranslation();
 
     return (
-        <div className="mt-[10px] py-[58px] bg-dark_blue">
+        <div className="mt-[10px] py-[58px] bg-[#122247]">
             <div className="max-w-[1300px] mx-auto">
                 <div className="flex max-md:flex-col items-center">
                     <div className="flex gap-1 max-md:flex-col items-stretch">
-                        <img src={Logo} alt="logo" className="h-full" />
                         <h4 className="w-[164px] text-white">
                             {t('footer.companyName')}
                         </h4>

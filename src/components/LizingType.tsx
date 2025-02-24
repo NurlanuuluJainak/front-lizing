@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import CarImg from "../../public/images/car.png";
-import CombineImg from "../../public/images/combine.png";
+import CarImg from "../../public/images/pngimg.com - mercedes_PNG80175 1.png";
+import CombineImg from "../../public/images/gs2124 1.png";
 import { useTranslation } from "react-i18next";
 
 export default function LizingType() {
@@ -13,7 +13,7 @@ export default function LizingType() {
             <h4 className="font-bold text-[20px]">{t('gosLizingType.lizingGos')}</h4>
             <span className="text-[#8B8B8B] text-[16px]">
               {t('gosLizingType.avtoLizing')}
-              <Link to={"/products"} className="text-blue font-bold">
+              <Link to={"/products"} className="text-[#122247] font-bold">
                 {t('gosLizingType.favorable')}
               </Link>{" "}
             </span>
@@ -27,7 +27,7 @@ export default function LizingType() {
             <h4 className="font-bold text-[20px]">{t('gosLizingType.lizingBisnes')}</h4>
             <span className="text-[#8B8B8B] text-[16px]">
               {t('gosLizingType.carLizing')}
-              <Link to={"/products/business-leasing"} className="text-blue font-bold">
+              <Link to={"/products/business-leasing"} className="text-[#122247] font-bold">
                 {t('gosLizingType.favorable')}
               </Link>{" "}
             </span>

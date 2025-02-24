@@ -1,5 +1,5 @@
 import React from "react";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 interface CalculateSliderProps {
     currentValue?: string;
@@ -15,7 +15,7 @@ interface CalculateSliderProps {
 }
 
 const CalculateSlider: React.FC<CalculateSliderProps> = (props) => {
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         props.onChange((prev: any) => ({
