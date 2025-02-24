@@ -23,7 +23,7 @@
   },
   "footer": {
     "companyName": "State Leasing Company",
-    "address": "Bishkek, Pushkin St. 12",
+    "address": "Bishkek, Moskovskaya St. 1",
     "workingHours": "Monday - Friday 9:00 AM - 6:00 PM",
     "copyright": " Open Joint Stock Company \"State Leasing Company\" (OJSC \"SLC\")"
   },
@@ -66,7 +66,7 @@
   },
   "lizingCalculator": {
     "title": "Leasing Calculator",
-    "description": "The cost of the leasing item and the calculations provided by the calculator are preliminary. For accurate determination of the interest rate under the contract, please contact a manager in your region.",
+    "description": "The cost of the leasing item and the calculations provided by the calculator are preliminary. ",
     "monthPayment": "Monthly Payment",
     "leasingCost": "Total Leasing Amount",
     "generalSum": "Principal Debt",
