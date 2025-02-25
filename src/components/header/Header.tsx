@@ -3,13 +3,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher.tsx';
 import Icon from '../../../public/icon/menu.svg'
-import Logo from '../../../public/icon/logo.svg'
+import LogoRu from '../../../public/icon/logo.svg'
+import LogoKg from '../../../public/icon/logoKg.svg'
+import LogoEn from '../../../public/icon/logoEn.svg'
+
 import Call from '../../../public/icon/call.svg'
 
 const Header = () => {
   const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
@@ -17,6 +20,19 @@ const Header = () => {
   const handleNavigate = () => {
     navigate('/')
   }
+
+
+  const getLogo = () => {
+    console.log(i18n.language)
+    switch (i18n.language) {
+      case "kg":
+        return LogoKg;
+      case "ru":
+        return LogoRu;
+      default:
+        return LogoEn;
+    }
+  };
 
   return (
     <header>
@@ -26,7 +42,7 @@ const Header = () => {
             <img src={Icon} alt="menu" />
           </button>
           <div className='cursor-pointer' onClick={handleNavigate}  >
-            <img src={Logo} alt="logo" />
+            <img src={getLogo()} alt="logo" className='w-[172px] h-[44px]' />
 
           </div>
         </div>

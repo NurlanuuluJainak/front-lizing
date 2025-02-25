@@ -23,7 +23,7 @@ export default function Contacts() {
             {t('contacts.phoneNumber')}
           </h3>
           <a href="tel:+996700497413" className="decoration-none hover:text-gray transition-colors duration-300">
-            <p className="text-[16px] font-[400] leading-[22px]">+996 700 49 74 13</p>
+            <p className="text-[16px] font-[400] leading-[22px]">+996 557 755 711</p>
           </a>
 
         </div>

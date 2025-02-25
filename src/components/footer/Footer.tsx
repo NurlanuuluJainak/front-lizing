@@ -61,15 +61,17 @@ export default function Footer() {
                     </span>
                     <div className="flex max-md:justify-center gap-x-5 md:ml-auto max-md:mt-6">
 
-                        <Link to={"/"}>
-                            <img src={Instagram} className="w-5 h-5" />
-                        </Link>
+                        <a href="https://www.instagram.com/gosleasingkg?igsh=NGxxd3VobzZrZ2Nu&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                            <img src={Instagram} className="w-5 h-5" alt="Instagram" />
+                        </a>
+
                         <Link to={"/"}>
                             <img src={Telegram} className="w-5 h-5" />
                         </Link>
-                        <Link to={"/"}>
-                            <img src={Facebook} className="w-5 h-5" />
-                        </Link>
+                        <a href="https://www.facebook.com/share/1AyxXbfYFa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <img src={Facebook} className="w-5 h-5" alt="Facebook" />
+                        </a>
+
                     </div>
                 </div>
             </div>
