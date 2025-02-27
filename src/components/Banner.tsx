@@ -73,7 +73,7 @@ const Banner = () => {
                 className="absolute left-0 sm:left-[5rem] w-full h-full flex items-center justify-start px-5 sm:px-10 bg-blue-900/50 max-md:top-[-8rem]"
               >
                 <div
-                  className={`text-white max-w-[600px] mb-10 text-center sm:text-left ${isTextVisible ? 'show-text' : 'fade-text'}`}>
+                  className={`text-white max-w-[630px] mb-10 text-center sm:text-left ${isTextVisible ? 'show-text' : 'fade-text'}`}>
                   <h1 className="text-2xl sm:text-4xl font-bold mb-4">{slide.primary[`title_${language}`]}</h1>
                   <div className="flex mb-[30px] gap-12 max-md:hidden">
                     {filteredItems?.length > 0 && filteredItems[0].items?.length > 0 ? (
