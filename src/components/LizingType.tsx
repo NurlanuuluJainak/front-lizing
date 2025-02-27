@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CarImg from "../../public/images/pngimg.com - mercedes_PNG80175 1.png";
+import CarImg from "../../public/images/auto.png";
 import CombineImg from "../../public/images/gs2124 1.png";
 import { useTranslation } from "react-i18next";
 
