@@ -79,7 +79,7 @@ const Banner = () => {
                 <div
                   className={`text-white max-w-[630px] mb-10 text-center sm:text-left ${isTextVisible ? 'show-text' : 'fade-text'}`}>
                   <h1 className="text-2xl sm:text-4xl font-bold mb-4">{slide.primary[`title_${language}`]}</h1>
-                  <div className="flex mb-[30px] gap-12 max-md:hidden">
+                <div className="flex mb-[30px] gap-12 max-md:hidden">
                     {slide.items.length > 0 ? (
                         slide.items.map((item: any, index: number) => (
                         <div key={index} className="flex flex-col gap-4">
@@ -96,7 +96,7 @@ const Banner = () => {
                     )}
 
                   </div>
-                  <Link to={"/products"} className="bg-white text-black px-[80px] text-[24px] py-[10px] rounded-lg">
+                  <Link to={"/products"} className="bg-white mt-10 text-black px-[80px] text-[24px] py-[10px]  rounded-lg">
                     {t('detailsButton')}
                   </Link>
                 </div>
