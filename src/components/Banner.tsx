@@ -26,7 +26,6 @@ const Banner = () => {
   if (!document) {
     return <Loading />;
   }
-
   const filteredItems = document.data.body.filter((item: any) => {
     return item.primary.title_ru || item.primary.title_kg;
   });
@@ -59,25 +58,30 @@ const Banner = () => {
         >
           {filteredItems.map((slide: any) => (
             <div key={slide.id} className="carousel-item bg-[#122247] w-full flex-shrink-0 ">
-              <img
-                src={slide.primary.img?.url || ''}
-                className="w-[600px] ml-auto h-[400px]  object-cover hidden sm:block"
-                alt={slide.alt || 'Слайд'}
+              { slide.primary.img?.url &&
+                <img
+                    src={slide.primary.img?.url || ''}
+                    className="w-[600px] ml-auto h-[400px]  object-cover hidden sm:block"
+                    alt={slide.alt || 'Слайд'}
+                />
+              }
+
+              {slide.primary.img_mobile?.url &&
+                <img
+                  src={slide.primary.img_mobile?.url || ''}
+                  className="w-[400px]  mt-[80%]  object-cover sm:hidden"
+                  alt="Mobile Banner"
               />
-              <img
-                src={slide.primary.img_mobile?.url || ''}
-                className="w-[400px]  mt-[80%]  object-cover sm:hidden"
-                alt="Mobile Banner"
-              />
+              }
               <div
                 className="absolute left-0 sm:left-[5rem] w-full h-full flex items-center justify-start px-5 sm:px-10 bg-blue-900/50 max-md:top-[-8rem]"
               >
                 <div
                   className={`text-white max-w-[630px] mb-10 text-center sm:text-left ${isTextVisible ? 'show-text' : 'fade-text'}`}>
                   <h1 className="text-2xl sm:text-4xl font-bold mb-4">{slide.primary[`title_${language}`]}</h1>
-                  <div className="flex mb-[30px] gap-8  max-md:hidden">
-                    {filteredItems?.length > 0 && filteredItems[0].items?.length > 0 ? (
-                      filteredItems[0].items.map((item: any, index: number) => (
+                <div className="flex mb-[30px] gap-12 max-md:hidden">
+                    {slide.items.length > 0 ? (
+                        slide.items.map((item: any, index: number) => (
                         <div key={index} className="flex flex-col gap-4">
                           <p>{item[`text_${language}`]}</p>
                           <div className="flex items-center  text-[32px] font-[400]">
